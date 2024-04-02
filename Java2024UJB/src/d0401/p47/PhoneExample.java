@@ -18,7 +18,7 @@ public class PhoneExample {
 		Phone phone3 = new SmartPhone("홍길동");
 		phone3.turnOn();
 		phone3.turnOff();
-		phone3.internetSearch();
+//		phone3.internetSearch();
 		}
 
 }
