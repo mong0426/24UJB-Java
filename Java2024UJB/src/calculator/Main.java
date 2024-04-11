@@ -1,44 +1,50 @@
 package calculator;
 
+import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.Panel;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Main implements ActionListener {
 	private Frame f;
+	private Panel p2;
 	private TextField tmsg;
 	private Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt0, bt10, bt11, bt12;
 
 	public Main() {
 		f = new Frame("Calculator");
-		f.setSize(800, 220);
+		f.setSize(800, 800);
 		f.setLayout(new FlowLayout());
-
+		p2 = new Panel();
 		tmsg = new TextField(50);
 
+		f.add(tmsg, BorderLayout.NORTH);
+		f.add(p2, BorderLayout.CENTER);
+//		f.add(bt12, "p2");
+//		f.add(bt11, "p2");
+//		f.add(bt10, "p2");
+//		f.add(bt9, "p2");
+//		f.add(bt8, "p2");
+//		f.add(bt7, "p2");
+//		f.add(bt6, "p2");
+//		f.add(bt5, "p2");
+//		f.add(bt4, "p2");
+//		f.add(bt3, "p2");
+//		f.add(bt2, "p2");
+//		f.add(bt1, "p2");
+//		f.add(bt0, "p2");
 		
+
+
+		f.setVisible(true);
 
 	}
 	public void startFrame() {
-		f.add(tmsg, "North");
-		f.add(bt12, "Center");
-		f.add(bt11, "Center");
-		f.add(bt10, "Center");
-		f.add(bt9, "Center");
-		f.add(bt8, "Center");
-		f.add(bt7, "Center");
-		f.add(bt6, "Center");
-		f.add(bt5, "Center");
-		f.add(bt4, "Center");
-		f.add(bt3, "Center");
-		f.add(bt2, "Center");
-		f.add(bt1, "Center");
-		f.add(bt0, "Center");
-		
-		f.setVisible(true);
+
 		bt1.addActionListener(this);
 		bt2.addActionListener(this);
 		bt3.addActionListener(this);
@@ -51,7 +57,7 @@ public class Main implements ActionListener {
 		bt0.addActionListener(this);
 		bt11.addActionListener(this);
 		bt12.addActionListener(this);
-		
+
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
